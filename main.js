@@ -10,8 +10,17 @@ function addExcitement (arr) {
     let buildMeUp = ""
 
     for (let i = 0; i < arr.length; i++) {
-        
+        /*
+            If the current value of `i` divided by 3 has no remainder, add an exclamation point to the end of
+            the word and then concatenate it to `buildMeUp`.
+
+            Otherwise, just concatenate the word itself.
+         */
+        if (i !== 0 && i % 3 === 0) { 
+            arr[i] = arr[i] + "!"
+        }
         const word = arr[i]
+        
 
         // Concatenate the new word onto buildMeUp with space
         buildMeUp += word + " "       
